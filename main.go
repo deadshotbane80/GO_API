@@ -10,14 +10,14 @@ import (
 )
 
 type Movie struct {
-	MovieId       string    `json:movieid`
-	MovieName     string    `json:moviename`
-	MovieLength   string    `json:movielength`
-	MovieDirector *Director `json:moviedirector`
+	MovieId       string    `json:"movieid"`
+	MovieName     string    `json:"moviename"`
+	MovieLength   string    `json:"movielength"`
+	MovieDirector *Director `json:"moviedirector"`
 }
 type Director struct {
-	Fullname string `json:fullname`
-	Nmovies  int    `json:nmovies` //no of movies directed by the director
+	Fullname string `json:"fullname"`
+	Nmovies  int    `json:"nmovies"` //no of movies directed by the director
 }
 
 var movies []Movie
